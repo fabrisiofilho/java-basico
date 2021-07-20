@@ -11,8 +11,12 @@ public class Programa {
         if (Objects.nonNull(args) && args.length > 0) {
             if ("soma".equals(args[0])) {
                 somar(args);
-            } else if ("add".equals(args[0])) {
+            }else if ("add".equals(args[0])) {
                 adicionar(args);
+            } else if ("mult".equals(args[0])){
+                multiplica(args);
+            } else if ("exp".equals(args[0])) {
+                explica();
             } else {
                 listar(args);
             }
@@ -23,27 +27,40 @@ public class Programa {
 
     private static void listar(String[] args) {
         for (String item : args) {
-            if(!"add".equals(args[item])){
-                System.out.println(item);
-            }
+            System.out.println(item);
         }
     }
 
     private static void somar(String[] args) {
         Integer soma = 0;
-        for (int i = 1; i < args.length; i++) { // i = i + 1 
+        for (int i = 1; i < args.length; i++) {
             soma += Integer.valueOf(args[i]);
         }
         System.out.println("A soma dos valores: " + soma);
+    }
+
+    private static void multiplica(String[] args) {
+        Integer multiplica = 1;
+        for (int i = 1; i < args.length; i++) {
+            multiplica = multiplica * Integer.valueOf(args[i]);
+        }
+        System.out.println("A multiplicação dos valores " + multiplica);
     }
 
     private static void adicionar(String[] args) {
         List<String> compras = new ArrayList<>();
         Integer i = 0;
         while (i < args.length) {
-            compras.add(args[i]);
+            if (!"add".equals(args[i])) {
+                compras.add(args[i]);
+            }
             ++i;
+        }
+        System.out.println(Arrays.toString(compras.toArray()));
     }
-    System.out.println(Arrays.toString(compras.toArray()));
+
+    private static void explica() {
+        System.out.println("i++, te passa a variavel primeiro e depois incrementa");
+        System.out.println("++i, incrementa e depois passa a variavel");
     }
 }
