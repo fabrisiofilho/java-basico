@@ -9,12 +9,12 @@ public class AtividadeScanner {
         try(Scanner ler = new Scanner(System.in);) {
             List<String> list = new ArrayList<String>();
             String items;
-                while(list.size()<5){
-                    System.out.println("Adicionar o item " + i + "a lista:");
-                    items = ler.nextLine();
-                    list.add(items);
-                }
-        System.out.println(Arrays.toString(list.toArray()));
+            while(list.size()<5){
+                System.out.println("Adicionar o item a lista:");
+                items = ler.nextLine();
+                list.add(items);
+            }
+            System.out.println(Arrays.toString(list.toArray()));
         } catch (Exception e) {
             System.out.println("Error");
         }
