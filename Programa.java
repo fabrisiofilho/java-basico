@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Objects;
 
 public class Programa {
-    // [[ytftyfty][tftft][ygygy]]
     public static void main(String[] args_) {
         String[] args = { "add", "2", "8" };
         System.out.println("Ligou");
