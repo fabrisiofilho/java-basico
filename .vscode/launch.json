@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch AtividadeScanner",
+            "request": "launch",
+            "mainClass": "AtividadeScanner",
+            "projectName": "java-basico_32428c52"
+        },
+        {
+            "type": "java",
             "name": "soma",
             "request": "launch",
             "mainClass": "${file}",
