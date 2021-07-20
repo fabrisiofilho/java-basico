@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class Programa {
     public static void main(String[] args_) {
-        String[] args = { "exp", "2", "8" };
+        String[] args = { "add", "2", "8" };
         System.out.println("Ligou");
         if (Objects.nonNull(args) && args.length > 0) {
             if ("soma".equals(args[0])) {
@@ -60,7 +60,11 @@ public class Programa {
 
     private static void explica() {
         Integer i = 0;
+        System.out.println("I = 0");
+        System.out.println("Após incrementar (i++)");
         System.out.println(i++);
+        i = 0;
+        System.out.println("Após incrementar (++i)");
         System.out.println(++i);
     }
 }
