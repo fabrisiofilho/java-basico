@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class Programa {
     public static void main(String[] args_) {
-        String[] args = { "add", "2", "8" };
+        String[] args = { "exp", "2", "8" };
         System.out.println("Ligou");
         if (Objects.nonNull(args) && args.length > 0) {
             if ("soma".equals(args[0])) {
@@ -59,7 +59,8 @@ public class Programa {
     }
 
     private static void explica() {
-        System.out.println("i++, te passa a variavel primeiro e depois incrementa");
-        System.out.println("++i, incrementa e depois passa a variavel");
+        Integer i = 0;
+        System.out.println(i++);
+        System.out.println(++i);
     }
 }
