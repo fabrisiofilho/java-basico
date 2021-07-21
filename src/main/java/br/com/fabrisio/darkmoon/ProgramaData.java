@@ -39,22 +39,22 @@ public class ProgramaData {
 					diaProximo++;
 				}
 			}
-			System.out.println("Hoje é: " + hoje.format(DateTimeFormatter.ISO_LOCAL_DATE));
+			System.out.println("Hoje ï¿½: " + hoje.format(DateTimeFormatter.ISO_LOCAL_DATE));
 			System.out.println("Nasceu em: " + nasceu.format(DateTimeFormatter.ISO_LOCAL_DATE));
-			System.out.println("Viveu : " + dia + " até hoje");
+			System.out.println("Viveu : " + dia + " atï¿½ hoje");
 			System.out.println("Faltam : " + diaProximo + " aniversario");
 			if(fez == 1) {
 				System.out.println("Ja fez aniversario este ano");
 			}else {
-				System.out.println("Não fez aniversario ainda este ano");
+				System.out.println("Nï¿½o fez aniversario ainda este ano");
 			}
 		} else {
-			System.out.println("Está data é no futuro");
+			System.out.println("Estï¿½ data ï¿½ no futuro");
 			while(hoje.isBefore(nasceu)) {
 				hoje = hoje.plusDays(1);
 				dia++;
 			}
-			System.out.println("E a pessoa nascerá daqui : " + dia);
+			System.out.println("E a pessoa nascerï¿½ daqui : " + dia);
 		}
 	}
 }
